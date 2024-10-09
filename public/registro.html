@@ -8,13 +8,30 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Registro</h1>
-    <form id="registerForm">
-        <input type="text" id="username" placeholder="Usuario" required>
-        <input type="password" id="password" placeholder="Contraseña" required>
-        <button type="submit" class="btn btn-outline-primary">Registrarse</button>
-    </form>
-    <a href="index.html">Volver al login</a>
+
+    <div class="register-box">
+        <h1>Registro</h1>
+
+        <form id="registerForm">
+            <div class="user-box">
+                <input type="text" id="username" placeholder="Usuario" required>
+                <label>Usuario</label>
+            </div>
+            
+            <div class="user-box">
+                <input type="password" id="password" placeholder="Contraseña" required>
+                <label>Contraseña</label>
+            </div>
+            
+            <button type="submit" class="btn btn-outline-primary">Registrarse</button>
+        </form>
+
+        <a href="index.html">Volver al login</a>
+        
+    </div>
+
+    
+    
 
     <script src="registro.js"></script>
 
