@@ -1,7 +1,70 @@
 body {
+    margin: 0;
+    padding: 0;
     font-family: Arial, sans-serif;
-    margin: 20px;
-    background-color: #f9f9f9;
+    background-color: #243b55;
+}
+
+html{
+    height:100%;
+}
+
+.login-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background:rgba(0,0,0,.5);
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.login-box h1{
+    margin: 0 0 30px;
+    text-align: center;
+    color: #fff;
+    padding: 0;
+}
+
+.login-box .user-box{
+    position: relative;
+}
+
+.login-box .user-box input{
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+}
+
+.login-box .user-box label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color:#fff;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label{
+    top: -20px;
+    font-size: 12px;
+    color: #03e9f4;
+    left: 0;
+}
+
+.login-box a{
+    
 }
 
 h1 {
