@@ -16,3 +16,9 @@ document.getElementById('registerForm').addEventListener('submit', async (e) => 
         alert('Error al registrarse');
     }
 });
+
+document.getElementById('volverlogin').addEventListener('click', async (e) => {
+    e.preventDefault();
+    window.location.href = 'index.html';
+});
+

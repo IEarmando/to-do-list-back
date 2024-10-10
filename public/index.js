@@ -15,3 +15,8 @@ document.getElementById('loginForm').addEventListener('submit', async (e) => {
         alert('Usuario no encontrado');
     }
 });
+
+document.getElementById('registerButton').addEventListener('click', (e) => {
+    e.preventDefault();
+    window.location.href = 'registro.html';
+});

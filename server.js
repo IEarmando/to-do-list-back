@@ -35,8 +35,9 @@ db.connect((err) => {
         console.error('Error conectando a la base de datos:', err);
         return;
     }
-    console.log('Conexión exitosa a la base de datos MySQL');
+    console.log('Conexión exitosa a la base de datoos MySQL');
 });
+
 
 // Ruta para registrar usuarios
 app.post('/api/registro', async (req, res) => {
@@ -102,9 +103,11 @@ app.post('/api/login', (req, res) => {
 });
 
 
+
+
 // Ruta para agregar tareas (requiere autenticación)
 app.post('/api/tasks', (req, res) => {
-    const task = req.body; // Asegúrate de que aquí estás capturando correctamente la tarea.
+    const task = req.body; 
     const userId = req.session.userId;
 
     if (!userId) {

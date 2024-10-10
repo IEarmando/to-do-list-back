@@ -5,6 +5,12 @@ const vacio = document.getElementById('vacio');
 
 document.addEventListener("DOMContentLoaded", loadTasksFromLocalStorage);
 
+document.getElementById('btn-back').addEventListener('click', async (e) => {
+    e.preventDefault();
+    window.location.href = 'index.html';
+});
+
+
 // Escuchar el submit del formulario
 btnadd.addEventListener("submit", async (e) => {
     e.preventDefault();
@@ -23,7 +29,7 @@ btnadd.addEventListener("submit", async (e) => {
     vacio.style.display = "none";
 
     // Guarda la tarea en el localStorage y en la base de datos
-    await saveTaskToDatabase(Tarea, false); // false significa que no está completada
+    await saveTaskToDatabase(Tarea, false); 
     saveTasksToLocalStorage();
 });
 
@@ -32,7 +38,7 @@ function createTaskElement(taskText) {
     li.textContent = taskText;
 
     li.appendChild(AddEditBtn(li));
-    li.appendChild(AddDeleteBtn(li));  // Pasamos 'li' para poder eliminarla
+    li.appendChild(AddDeleteBtn(li));  
     li.appendChild(AddCompleteBtn(li));
 
     return li;

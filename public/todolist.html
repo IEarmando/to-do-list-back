@@ -8,16 +8,22 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>To-Do List</h1>
-    <form id="taskForm">
-        <input type="text" id="taskName" placeholder="Nueva tarea" required>
-        <button type="submit" class="btn btn-outline-primary" id="btn-add">Agregar</button>
-    </form>
-    
-    <p id="vacio" style="display:none;">No tienes tareas</p>
-    <ul id="ListaTareas"></ul>
 
-    <a href="index.html">Cerrar sesión</a>
+    <div class="todolist-box">
+        <h1>To-Do List</h1>
+        
+            <form id="taskForm">
+                <div class="tasks-box">
+                    <input type="text" id="taskName" placeholder=" Nueva tarea">
+                </div>
+                <button type="submit" class="btn btn-outline-primary" id="btn-add">Agregar</button>
+            </form>
+
+                <p id="vacio" style="display:none;">No tienes tareas (:</p>
+                <ul id="ListaTareas"></ul>
+
+                <button type="submit" class="btn btn-outline-primary" id="btn-back">Cerrar sesión</button>
+    </div>
 
     <script src="todolist.js"></script>
 </body>

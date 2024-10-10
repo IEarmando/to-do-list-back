@@ -67,6 +67,11 @@ html{
     text-decoration: none;
 }
 
+.login-box #loginForm #registerButton {
+    margin-left: 80px;
+    
+}
+
 
 
 .register-box{
@@ -127,7 +132,70 @@ html{
     text-decoration: none;
 }
 
+.register-box #registerForm #volverlogin {
+    margin-left: 80px;
+    
+}
 
+
+
+
+.todolist-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 900px;
+    padding: 50px;
+    transform: translate(-50%, -50%);
+    background:rgba(0,0,0,.5);
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.todolist-box h1{
+    margin: 0 0 30px;
+    text-align: center;
+    color: #fff;
+    padding: 0;
+}
+
+.todolist-box .tasks-box{
+    position: relative;
+}
+
+.todolist-box .tasks-box input{
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+    border-radius: 5px;
+}
+.todolist-box .tasks-box input:hover{
+    border: 1px solid #03e9f4;
+
+}
+
+.todolist-box p{
+    color: #fff;
+}
+
+.todolist-box a{
+    text-decoration: none;
+}
+
+#ListaTareas{
+    margin-top: 20px;
+    list-style-type: none;
+    color: #fff ;
+}
+
+#ListaTareas li{
+    margin-bottom: 10px;
+}
 
 h1 {
     font-size: 24px;
