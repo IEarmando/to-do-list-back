@@ -5,8 +5,20 @@ const session = require('express-session');
 const bodyParser = require('body-parser');
 const path = require('path');
 
+//cargar variables de entorno
+require('dotenv').config();
+
+// Configurar la conexión a la base de datos MySQL
+const db = mysql.createConnection({
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME
+});
+
 const app = express();
-const port = 3000;
+//usar puerto dsde .env o por defecto 3000
+const PORT = process.env.PORT || 3000;
 
 // Middleware
 app.use(bodyParser.json());
@@ -17,18 +29,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // Configurar sesiones
 app.use(session({
-    secret: 'clave-secreta',
+    secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: false
 }));
 
-// Configurar la conexión a la base de datos MySQL
-const db = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: 'r00t',
-    database: 'TO_DO_List'
-});
+
 
 db.connect((err) => {
     if (err) {
@@ -178,6 +184,6 @@ app.delete('/api/tasks/:name', (req, res) => {
 });
 
 // Iniciar el servidor
-app.listen(port, () => {
-    console.log(`Servidor escuchando en http://localhost:${port}`);
+app.listen(PORT, () => {
+    console.log(`Servidor escuchando en http://localhost:${PORT}`);
 });
